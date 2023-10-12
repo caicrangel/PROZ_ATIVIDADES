@@ -1,0 +1,19 @@
+.p{
+text-align: justify;
+}
+.container {
+display:flex;
+text-align: center;
+}
+
+.img {
+margin-right: 10px; 
+border-radius: 20%;
+width: 400px; /* Largura desejada */
+height: 300px; /* Altura desejada */
+}
+footer {
+background-color: rgb(254, 255, 171);
+margin-right: 10px; 
+border-radius: 20%;
+}
