@@ -1,22 +1,42 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Define a altura mínima da viewport. */
+ 
   }
 
 header{
     display: flex;
-    background-color: lightgrey;
+    background-color: lightgray;
+    padding: 20px;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 100px;
     margin: 0;
     padding: 0;
-    align-items:  center;
+    align-items:  flex-start;
     justify-content: space-around;
+    z-index: 100;    
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
 }
+
+
+.div_format{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 25% 1px 25%;
+    font-size: larger;
+}
+
+
 
 .ul{
     display: flex;
-    gap: 30px;
+    gap: 50px;
     list-style: none;
     font-family: sans-serif;
     
@@ -36,11 +56,19 @@ justify-content: center;
 .img {
 margin-right: 10px; 
 border-radius: 20%;
-width: 400px; /* Largura desejada */
-height: 300px; /* Altura desejada */
+width: 400px; 
+height: 300px; 
 }
 
 
+.img:hover {
+transform: scale(1.3); 
+}
+
+
+figcaption{
+    text-align: center;
+}
 
 footer {
     display: flex;
@@ -51,4 +79,44 @@ footer {
     padding: 0;
     align-items:  center;
     justify-content: space-around;
+}
+
+
+/*Customizando os menus */
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px; /* Espaço entre os itens do menu */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos para o submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posiciona o submenu abaixo do item pai */
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background-color: lightgray;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+
+
+/* Mostra o submenu quando o item pai é destacado */
+nav li:hover .submenu,
+nav li:hover .submenu-cascata {
+    display: block;
 }
