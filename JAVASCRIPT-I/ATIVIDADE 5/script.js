@@ -12,7 +12,7 @@ elul.innerHTML = `
     <li>3º ítem</li>
 `;
 const ela = document.querySelector('a');
-ela.innerText = 'Conteúdo a tag <a> redirecionando para o site da proz';
+ela.innerText = 'Conteúdo da tag <a> redirecionando para o site da proz';
 
 const elol = document.querySelector('#lista-ordenada');
 elol.innerHTML = `
