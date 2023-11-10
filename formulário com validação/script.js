@@ -204,12 +204,16 @@ confirmSenhaInput.addEventListener('change',(e) => {
     } else {
         confirmSenhaInput.classList.remove('correct')
         confirmSenhaInput.classList.add('error')
+        confirmSenhaHelp.innerText = 'As senhas precisam ser iguais!'
+        confirmSenhaHelp.classList.add('visible')
 
     }
     
     if (senhaConfirmacao === '') {
         confirmSenhaInput.classList.remove('correct')
         confirmSenhaInput.classList.remove('error')
+        confirmSenhaHelp.classList.remove('visible')
+
     }  
 
     if (senhaConfirmacao === senhaPrimeiroCampo) {
