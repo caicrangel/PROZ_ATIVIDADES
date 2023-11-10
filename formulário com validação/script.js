@@ -17,8 +17,8 @@ function mostrarBotEnviar(input){
      })
      
  }
-
-function validarSenha(senha) {
+ 
+ function validarSenha(senha) {
     var regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,})$/;
 
     if (regex.test(senha)) {
