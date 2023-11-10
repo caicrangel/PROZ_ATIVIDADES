@@ -18,6 +18,15 @@ function mostrarBotEnviar(input){
      
  }
 
+function validarSenha(senha) {
+    var regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,})$/;
+
+    if (regex.test(senha)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 // ---------- VALIDAÇÃO USERNAME ---------- //
 let usernameLabel = document.querySelector('label[for="username"]');
@@ -133,17 +142,6 @@ senhaInput.addEventListener('focus',()=>{
 senhaInput.addEventListener('blur',()=>{
     senhaLabel.classList.remove('required-popup')
 })
-
-
-function validarSenha(senha) {
-    var regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,})$/;
-
-    if (regex.test(senha)) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 // Validar valor do input
 senhaInput.addEventListener('change',(e)=>{
