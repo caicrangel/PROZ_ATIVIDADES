@@ -178,7 +178,7 @@ senhaInput.addEventListener('change',(e)=>{
 })
 bloqueiaEnter(senhaInput)
 
-
+// ---------- VALIDAÇÃO CONFIRMA SENHA ---------- //
 let confirmSenhaLabel = document.querySelector('label[for="confirma-senha"]')
 let confirmSenhaInput = document.getElementById('confirma-senha')
 let confirmSenhaHelp = document.getElementById('senha-helper2')
