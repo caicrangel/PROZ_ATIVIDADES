@@ -58,14 +58,6 @@ usernameInput.addEventListener('change',(e)=>{
         usernameHelper.innerText = ''
         inputsCorretos.username = true
     }
-    if (valor === '') {
-        usernameHelper.classList.remove('visible')
-        usernameInput.classList.remove('error')
-        usernameInput.classList.remove('correct')
-        usernameInput.classList.remove('correct')
-        usernameHelper.innerText = ''
-        inputsCorretos.username = false
-    }
 })
 bloqueiaEnter(usernameInput)
 
@@ -97,12 +89,6 @@ emailInput.addEventListener('change',(e)=>{
         emailHelper.classList.add('visible')
         inputsCorretos.email = false
     }
-    if (valor === '') {
-        emailInput.classList.remove('error')
-        emailHelper.classList.remove('visible')
-        inputsCorretos.email = false
-
-    }
 })
 bloqueiaEnter(emailInput)
 
@@ -123,11 +109,6 @@ idadeInput.addEventListener('change',(e)=>{
         idadeInput.classList.add('correct')
         idadeHelp.classList.remove('visible')
         idadeHelp.innerText = ''
-    }
-    if (valor === '') {
-        idadeHelp.classList.remove('visible')
-        idadeInput.classList.remove('correct')
-        idadeInput.classList.remove('error')
     }
 })
 
@@ -173,16 +154,7 @@ senhaInput.addEventListener('change',(e)=>{
         confirmSenhaLabel.style.display = 'none'
         confirmSenhaInput.style.display = 'none'
         inputsCorretos.senha = false
-    }
-    if (senha === '') {
-        confirmSenhaInput.value = ''
-        confirmSenhaInput.classList.remove('error')
-        senhaInput.classList.remove('correct')
-        senhaInput.classList.remove('error')
-        senhaHelp.classList.remove('visible')   
-        inputsCorretos.senha = false     
-    }
-    
+    }    
 })
 bloqueiaEnter(senhaInput)
 
@@ -217,14 +189,6 @@ confirmSenhaInput.addEventListener('change',(e) => {
         confirmSenhaHelp.classList.add('visible')
         inputsCorretos.confirmaSenha = false
     }
-    
-    if (senhaConfirmacao === '') {
-        confirmSenhaInput.classList.remove('correct')
-        confirmSenhaInput.classList.remove('error')
-        confirmSenhaHelp.classList.remove('visible')
-        inputsCorretos.confirmaSenha = false
-
-    }  
 })
 bloqueiaEnter(confirmSenhaInput)
 
