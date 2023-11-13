@@ -56,6 +56,7 @@ usernameInput.addEventListener('change',(e)=>{
         usernameHelper.classList.remove('visible')
         usernameInput.classList.add('correct')
         usernameHelper.innerText = ''
+        inputsCorretos.username = true
     }
     if (valor === '') {
         usernameHelper.classList.remove('visible')
@@ -63,6 +64,7 @@ usernameInput.addEventListener('change',(e)=>{
         usernameInput.classList.remove('correct')
         usernameInput.classList.remove('correct')
         usernameHelper.innerText = ''
+        inputsCorretos.username = false
     }
 })
 bloqueiaEnter(usernameInput)
@@ -86,16 +88,19 @@ emailInput.addEventListener('change',(e)=>{
     if (valor.includes('@') && valor.includes('.com')) {
         emailInput.classList.add('correct')
         emailHelper.classList.remove('visible')
+        inputsCorretos.email = true
 
     } else {
         emailInput.classList.remove('correct')
         emailInput.classList.add('error')
         emailHelper.innerText = 'Verifique seu e-mail!'
         emailHelper.classList.add('visible')
+        inputsCorretos.email = false
     }
     if (valor === '') {
         emailInput.classList.remove('error')
         emailHelper.classList.remove('visible')
+        inputsCorretos.email = false
 
     }
 })
@@ -154,6 +159,7 @@ senhaInput.addEventListener('change',(e)=>{
         senhaHelp.innerText = ''
         confirmSenhaLabel.style.display = 'block'
         confirmSenhaInput.style.display = 'block'
+        inputsCorretos.senha = true
     } else {
         senhaInput.classList.remove('correct')
         senhaInput.classList.add('error')
@@ -166,13 +172,15 @@ senhaInput.addEventListener('change',(e)=>{
         `
         confirmSenhaLabel.style.display = 'none'
         confirmSenhaInput.style.display = 'none'
+        inputsCorretos.senha = false
     }
     if (senha === '') {
         confirmSenhaInput.value = ''
         confirmSenhaInput.classList.remove('error')
         senhaInput.classList.remove('correct')
         senhaInput.classList.remove('error')
-        senhaHelp.classList.remove('visible')        
+        senhaHelp.classList.remove('visible')   
+        inputsCorretos.senha = false     
     }
     
 })
@@ -200,25 +208,41 @@ confirmSenhaInput.addEventListener('change',(e) => {
     if (senhaConfirmacao === senhaPrimeiroCampo) {
         confirmSenhaInput.classList.add('correct')
         confirmSenhaInput.classList.remove('error')
+        inputsCorretos.confirmaSenha = true
 
     } else {
         confirmSenhaInput.classList.remove('correct')
         confirmSenhaInput.classList.add('error')
         confirmSenhaHelp.innerText = 'As senhas precisam ser iguais!'
         confirmSenhaHelp.classList.add('visible')
-
+        inputsCorretos.confirmaSenha = false
     }
     
     if (senhaConfirmacao === '') {
         confirmSenhaInput.classList.remove('correct')
         confirmSenhaInput.classList.remove('error')
         confirmSenhaHelp.classList.remove('visible')
+        inputsCorretos.confirmaSenha = false
 
     }  
-
-    if (senhaConfirmacao === senhaPrimeiroCampo) {
-        let botaoEnviar = document.getElementById('enviar');
-        botaoEnviar.removeAttribute('disabled');
-    }
 })
 bloqueiaEnter(confirmSenhaInput)
+
+let botaoEnviar = document.getElementById('enviar');
+let inputsCorretos = {
+    username: false,
+    email: false,
+    senha: false,
+    confirmaSenha: false
+}
+
+botaoEnviar.addEventListener('click',(e) =>{
+    if (inputsCorretos.username == false ||
+        inputsCorretos.email == false ||
+        inputsCorretos.senha == false ||
+        inputsCorretos.confirmaSenha == false){
+        e.preventDefault()
+    } else {
+        alert('Formulário enviado com sucesso!!!')
+    }
+})

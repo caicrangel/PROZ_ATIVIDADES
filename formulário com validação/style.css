@@ -11,14 +11,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #101010;
+  background-image: url(img/background.jpg);
 }
 
 form {
   display: flex;
   flex-direction: column;
   width: 400px;
-  background-color: lightgray;
+  background-color: rgb(190, 190, 190);
   border-radius: 16px;
   padding: 1.5rem 40px;
 }
