@@ -184,6 +184,7 @@ bloqueiaEnter(confirmSenhaInput)
 
 //Configurando o botão para tratar o preenchimento correto do formulário.
 let botaoEnviar = document.getElementById('enviar');
+let form = document.getElementsByTagName('form')
 let inputsCorretos = {
     username: false,
     email: false,
@@ -197,6 +198,8 @@ botaoEnviar.addEventListener('click',(e) =>{
         inputsCorretos.senha == false ||
         inputsCorretos.confirmaSenha == false){
         e.preventDefault()
+        alert('Preencha todos os campos obrigatórios!')
+
     } else {
         alert('Formulário enviado com sucesso!!!')
     }
