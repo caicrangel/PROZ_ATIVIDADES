@@ -6,18 +6,7 @@ input.addEventListener('keydown',(e) =>{
     }
     })
 }
-  
-function mostrarBotEnviar(input){
-    input.addEventListener('blur',() =>{
-         if (confirmSenhaInput.value !== '' ) {
-             botEnviar.classList.add('visible')
-         }else{
-             botEnviar.classList.remove('visible')
-         }
-     })
-     
- }
- 
+
  function validarSenha(senha) {
     var regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(.{8,})$/;
 
