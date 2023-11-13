@@ -192,6 +192,8 @@ confirmSenhaInput.addEventListener('change',(e) => {
 })
 bloqueiaEnter(confirmSenhaInput)
 
+
+//Configurando o botão para tratar o preenchimento correto do formulário.
 let botaoEnviar = document.getElementById('enviar');
 let inputsCorretos = {
     username: false,
