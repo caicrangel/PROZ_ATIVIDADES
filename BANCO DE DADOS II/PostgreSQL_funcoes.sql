@@ -10,7 +10,7 @@ INSERT INTO clientes (nome_cliente, data_cadastro) VALUES
     ('Anderson Gomes', '2023-12-13'),
     ('Pedro Gonçalvez', '2023-12-13'),
     ('Luiz Ribeiro', '2023-12-13'),
-    ('Ana Cristi    ('Maria Dores', '2023-12-13')na', '2023-12-13'),
+    ('Ana Cristina', '2023-12-13')
 
 INSERT INTO clientes (nome_cliente, data_cadastro) VALUES 
 	('Maria Dores', '2023-12-13')
